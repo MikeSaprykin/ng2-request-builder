@@ -1,7 +1,8 @@
 import {
   RequestMethod,
   Request,
-  Headers
+  Headers,
+  URLSearchParams
 } from '@angular/http';
 
 export interface AnyObject {

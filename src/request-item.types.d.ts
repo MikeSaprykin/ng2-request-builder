@@ -3,11 +3,11 @@ import {
   Request
 } from '@angular/http';
 
-export declare interface AnyObject {
+export interface AnyObject {
   [key: string]: any
 }
 
-export declare interface RequestItem {
+export interface RequestItem {
   composedUrl: string;
   body: any;
   headers: Headers;

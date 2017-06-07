@@ -1,6 +1,7 @@
 import {
   RequestMethod,
-  Request
+  Request,
+  Headers
 } from '@angular/http';
 
 export interface AnyObject {

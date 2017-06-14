@@ -1,2 +1,2 @@
 export * from './request-item.types';
-export { CreateRequestItem } from './request-item.factory';
+export { CreateRequestBuilder } from './request-item.builder';

@@ -1,5 +1,6 @@
-# ng2-request-factory
-An implementation of some kind of angular2 request factory with request item object creator decorator.
+# Angular2 Request Builder
+An implementation of some kind of angular2 request builder with flexible creation and update
+of request item with chainiable functions and class property decorator
 * [ ] TODO: Add unit tests
 * [ ] TODO: Add documentation
 * [ ] TODO: Add README

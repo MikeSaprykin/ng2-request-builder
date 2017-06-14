@@ -31,25 +31,21 @@ class RequestBuilderItem implements RequestBuilder {
 
   replaceUrlParams(params: AnyObject): RequestBuilder {
     this.composedUrl = this.url;
-    for (const key in params) {
-      this.composedUrl = this.composedUrl.replace(`<${key}>`, params[key]);
-    }
+    Object.keys(params).forEach(key => {
+      this.composedUrl = this.composedUrl.replace(`<${key}>`, params[key])
+    });
     return this;
   }
 
   setQueryParams (queryParams: AnyObject): RequestBuilder {
     this.params = this.params || new URLSearchParams();
-    for (const key in queryParams) {
-      this.params.set(key, queryParams[key])
-    }
+    Object.keys(queryParams).forEach(key => this.params.set(key, queryParams[key]));
     return this;
   }
 
   deleteQueryParams(...queryParamNames: Array<string>): RequestBuilder {
     this.params = this.params || new URLSearchParams();
-    for (const param of queryParamNames) {
-      this.params.delete(param)
-    }
+    queryParamNames.map(param => this.params.delete(param));
     return this;
   }
 
